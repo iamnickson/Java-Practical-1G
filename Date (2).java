@@ -1,13 +1,13 @@
 public class Date
 {
-	private int day; 
+	private int day;
 	private int month;
 	private int year;
-	
+
 	public Date()
 	{
-		day=8;
-		month=9;
+		day=28;
+		month=10;
 		year=1985;
 	}
 	void setDate(int dd, int mm, int yyyy)
@@ -32,22 +32,17 @@ public class Date
 	{
 		if(day>31 || month>12)
 		{
-			String date ="Recheck Date and month";
+			String date ="Recheck the date";
 			return date;
 		}
-		else if(day<10 && month<10)
+		else if(day<10 || month<10)
 		{
 			String date ="0"+day+" 0"+month+" "+year;
 			return date;
 		}
-		else if(day<10 && month>9 && month<13)
+		else
 		{
-			String date ="0"+day+" "+month+" "+year;
-			return date;
-		}
-		else if(day>9 && day<32 && month<10)
-		{
-			String date =day+" 0"+month+" "+year;
+			String date =day+" "+month+" "+year;
 			return date;
 		}
 		return "";
