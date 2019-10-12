@@ -1,0 +1,22 @@
+public class CeckBoolean
+{
+private static boolean gameContinues(int score, int lives, int level) 
+{
+    // has at least one life
+    boolean stillAlive = lives >= 1; 
+    // is on level 1 and his/her score at least 1000
+    boolean cond1 = (level == 1 && score >= 1000); 
+    // is on level 2 and his/her score at least 2000
+    boolean cond2 = (level == 2 && score >= 2000);
+    // is on any level and his/her score at least 3000
+    boolean cond3 = score >= 3000;
+
+    // return true if has at least one life remaining and one of the conditions is met
+    return stillAlive && (cond1 || cond2 || cond3);
+}
+
+// The function you want just returns the inverse of what is defined
+public static boolean isGameOver(int score, int lives, int level) 
+{
+    return !gameContinues(score, lives, level);
+}

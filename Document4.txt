@@ -1,0 +1,22 @@
+public class BooleanCheck
+{
+public static String isGameOver(int score, int lives, int level)
+{
+    String result = "false";
+}
+public static void main(String args[])
+{
+   switch (level)
+   {
+     case 1:
+       result= score>1000 ? "true" : "false";
+       break;
+     case 2:
+       result= score>2000 ? "true" : "false";
+       break;
+     default:
+       result= score>3000 ? "true" : "false";
+    return result;
+   }
+}
+}

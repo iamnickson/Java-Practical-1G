@@ -1,0 +1,19 @@
+{
+public static boolean isGameOver(int score, int lives, int level) 
+{
+    while(lives > 0)
+    {
+        switch (level) 
+        {
+        case 1:
+            return (score > 1000) ? false : true ;
+
+        case 2:
+            return (score > 2000) ? false : true ;
+
+        case 3:
+            return (score > 3000) ? false : true ;
+        }
+    return false;
+    }
+}
